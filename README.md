@@ -22,7 +22,7 @@
 ## 🧠 1. Install (One-Line Setup)
 
 ```bash
-sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/<YOUR_GITHUB_USER>/<YOUR_REPO_NAME>/main/install_all.sh)"
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/PleaseCompile/seeker-installer/main/install_all.sh)"
 ````
 
 > 🧩 *This command will automatically:*
