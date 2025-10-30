@@ -1,6 +1,6 @@
 
 
-````markdown
+
 # 🌍 Seeker — One-Command Auto Installer (Ubuntu / Azure VM)
 
 > **For Educational & Lab Use Only**  
