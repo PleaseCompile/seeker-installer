@@ -153,7 +153,15 @@ info "Run Seeker: python3 seeker.py  (or use -h for options)"
 if [[ -n "${NGROK_TOKEN}" ]]; then
   info "You can run: ngrok http 8080 (ngrok installed)"
 else
-  info "If you need HTTPS tunnel, consider installing ngrok or using localtunnel (npx localtunnel --port 8080)"
+  info "If you need HTTPS tunnel, consider using localtunnel:"
+  info "   npx localtunnel --port 8080"
+fi
+
+# 11) Fix ownership permissions to prevent PermissionError
+if [[ -d "${CLONE_DIR}" ]]; then
+  USERNAME=$(logname 2>/dev/null || echo "$SUDO_USER" || whoami)
+  info "Fixing file permissions for user: ${USERNAME}"
+  chown -R "${USERNAME}:${USERNAME}" "${CLONE_DIR}" || warn "Failed to change file ownership"
 fi
 
 exit 0
